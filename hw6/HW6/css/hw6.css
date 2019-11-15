@@ -1,0 +1,14 @@
+#_header{
+  text-align: center;
+}
+hr{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#created{
+  border-collapse: collapse;
+  border: 2px solid black;
+  height: 10px;
+  width: 10px;
+  overflow:scroll;
+}
