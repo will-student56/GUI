@@ -1,0 +1,101 @@
+<!--
+William Labadie Moseley, UMass Lowell Computer Science, wmoseley@cs.uml.edu Copyright (c) 2019 by William Labadie Moseley.
+All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+updated by WLM on December 1, 2019 at 12:00 PM
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+    <script>
+      $( function() {
+        $( "#tabs" ).tabs();
+      } );
+  </script>
+    <!-- <script type='stylesheet' src="jq/jquery-3.4.1.min.js"></script>
+    <script type='stylesheet' src="jq/jquery-3.4.1.min.js"></script>
+    <script type="stylesheet" src="jq/jquery-ui.css"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/hw8.css">
+
+    <!-- <script type='stylesheet' src="jq/jquery-ui-git.js"></script>
+    <script type='stylesheet' src="jq/jquery-noidea.js"></script>
+    <script type='stylesheet' src="jq/jquery-ui.min.js"></script> -->
+    <script type='text/javascript' src="js/hw8_jq.js"></script>
+    <!-- <script type="text/javascript">
+    $(function() {
+        $("#tabs").tabs();
+    });
+    </script> -->
+  </head>
+  <body>
+    <div id='_header'>
+      <h2> Dynamic Multiplication Table v3</h2>
+    </div>
+    <hr>
+
+    <!-- Form and inputs styles with bootstrap-->
+    <!-- Source for linking slider and text box: https://stackoverflow.com/questions/13475016/how-to-update-html5-range-on-change-of-a-text-input -->
+    <form role='form'>
+      <div class='form-group'>
+        <label class="labelText" for='rStart'>Row starting number:</label>
+        <input type='number' class='form-control' id='rStart' oninput="rStartRange.value=rStart.value" placeholder='Enter row start'>
+        <div>
+          <input type="range" id="rStartRange" min="-99" max="99" class="slider" oninput="rStart.value=rStartRange.value">
+        </div>
+      </div>
+      <div class='form-group'>
+        <label class="labelText" for='rEnd'>Row ending number:</label>
+        <input type='number' class='form-control' id='rEnd' placeholder='Enter row end' oninput="rEndRange.value=rEnd.value">
+        <div>
+          <input type="range" id="rEndRange" min="-99" max="99" class="slider" oninput="rEnd.value=rEndRange.value">
+        </div>
+      </div>
+      <div class='form-group'>
+        <label class="labelText" for='cStart'>Column starting number:</label>
+        <input type='number' class='form-control' id='cStart' placeholder='Enter col start' oninput="cStartRange.value=cStart.value">
+        <div>
+          <input type="range" id="cStartRange" min="-99" max="99" class="slider" oninput="cStart.value=cStartRange.value">
+        </div>
+      </div>
+      <div class='form-group'>
+        <label class="labelText" for='cEnd'>Column ending number:</label>
+        <input type='number' class='form-control' id='cEnd' placeholder='Enter col end' oninput="cEndRange.value=cEnd.value">
+        <div>
+          <input type="range" id="cEndRange" min="-99" max="99" class="slider" oninput="cEnd.value=cEndRange.value">
+        </div>
+      </div>
+      <!-- type='submit' will refresh the page, type='button' will not-->
+      <!-- <button type="button" class="btn btn-default" id='submitButton' onclick="">Create Table</button> -->
+      <button type="button" class="btn btn-default" id='saveButton' onclick="">Save Table</button>
+      <button type="button" class="btn btn-default" id='deleteButton' onclick="deleteTabs()">Delete saves</button>
+    </form>
+    <hr>
+    <h3 id="alarmmsg"> </h3>
+
+    <!-- save tabs -->
+    <div id='tabs'>
+      <ul id='tabList'>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <script src="js/hw8.js"></script>
+    <!-- script source: https://www.w3schools.com/js/js_timing.asp-->
+    <script>
+      $( document ).ready(function() {
+        initializeTextValues();
+        setInterval(myValidate, 500);
+        setInterval(autoMain, 500);
+      });
+    </script>
+  </body>
+</html>
