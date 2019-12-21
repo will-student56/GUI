@@ -1,0 +1,21 @@
+First thing to note is that, like most people, i had difficulty with Google Chrome and some kind of security issue with regards to loading json data. What I ended up doing was just using Safari as my browser while I worked through this project instead. So if there's any issues viewing it, there's that.
+
+As for what's working, i'll go through each bullet from the rubric and describe what my code can do: 
+
+*Basic Functionality*
+->It selects 7 tiles for the hand randomly using the JSON database provided. It doesn't keep track of the total amount in the 'bag' since it's not a full game, and you should be able to play as much as possible.
+->The letters can be dragged and dropped into the Scrabble squares, you can’t remove them once they’re in though until you reset the board, because there’s no mention of this in the rubric and it makes calculating the score much easier.
+->The program identifies both the letter tile that’s dropped onto each square, and which tile goes with which square for the bonus squares.
+->the bored includes both a triple word and triple letter squares.
+->The score is tallied correctly as far as I know, it’s genuinely possible my calculations could be wrong, but I tested for hours throughout the process, fixing issues I found, so hopefully I got them all. I even took into account the order the tiles are dropped for calculating the triple word score.
+
+*Additional Functionality*
+->There’s a reset button that picks 7 new tiles for the hand, and sets the draggable and droppable elements back to default, so the user can keep playing indefinitely.
+->The bored is cleared and new tiles are given upon clicking the reset button.
+->The score is maintained and updated every time the board is reset.
+
+*Source Code Documentation and Formatting*
+->I added comments all over my javascript that I hope make sense. The html just has the draggables and droppable, a button, and <p> I use to update the score. Likewise the css just has a couple formatting pieces for make it look a bit nicer. Really didn’t see a reason to comment anything for those files.
+
+*Extra Credit*
+->No extra credit features

@@ -1,0 +1,101 @@
+<!--
+William Labadie Moseley, UMass Lowell Computer Science, wmoseley@cs.uml.edu Copyright (c) 2019 by William Labadie Moseley.
+All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+updated by WLM on December 19, 2019 at 12:00 PM
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/hw9.css">
+    <script type='text/javascript' src="js/hw9_jq.js"></script>
+  </head>
+  <body>
+    <div id=_body>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box1">
+        <p>Normal Score</p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box2">
+        <p>Normal Score</p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box3">
+        <div><img src="boxes/triple_letter_score.png" height="100px" width="100px"></div>
+      </div>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box4">
+        <p>Normal Score</p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box5">
+        <p>Normal Score</p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box6">
+        <p>Normal Score</p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header my_drop" class="box7">
+        <div><img src="boxes/triple_word_score.png" height="100px" width="100px"></div>
+      </div>
+
+    </div>
+
+    <div id=clear></div>
+    <br>
+    <br>
+
+    <div id=_body2>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile1">
+        <div id="tile1_img"></div>
+      </div>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile2">
+        <div id="tile2_img"></div>
+      </div>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile3">
+        <div id="tile3_img"></div>
+      </div>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile4">
+        <div id="tile4_img"></div>
+      </div>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile5">
+        <div id="tile5_img"></div>
+      </div>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile6">
+        <div id="tile6_img"></div>
+      </div>
+
+      <div id="draggable" class="ui-widget-content my_drag" class="tile7">
+        <div id="tile7_img"></div>
+      </div>
+
+    </div>
+
+    <div id=clear></div>
+    <br>
+
+    <button id=my_button onclick="refresh()">Reset Tiles</button>
+
+    <p2> score: </p2> <p2 id=score>0<p2>
+
+    <script>
+      $( document ).ready(function() {
+      });
+    </script>
+  </body>
+</html>

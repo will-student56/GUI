@@ -1,0 +1,36 @@
+/*
+William Labadie Moseley, UMass Lowell Computer Science, wmoseley@cs.uml.edu Copyright (c) 2019 by William Labadie Moseley.
+All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+updated by WLM on December 19, 2019 at 12:00 PM
+*/
+#clear{
+  clear: both;
+}
+#draggable {
+  float: left;
+  width: 100px;
+  height: 100px;
+  /* padding: 0.5em;
+  margin: 10px; */
+}
+#droppable {
+  background-color: green;
+  float: left;
+  width: 100px;
+  height: 100px;
+  /* padding: 0.5em;
+  margin: 10px;  */
+}
+#my_button{
+  text-align: center;
+  margin: 10px;
+}
+#_body {
+  margin-top: 10px;
+  margin-bottom: 20px:
+  text-align: center;
+}
+p {
+  text-align: center;
+  margin-top: 2.5em;
+}
